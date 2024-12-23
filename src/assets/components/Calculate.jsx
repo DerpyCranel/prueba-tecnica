@@ -3,12 +3,10 @@ import React, { useEffect } from "react";
 function Calculate({ n, onResult }) {
   // Función para verificar si un número es primo
   const primo = (num) => {
-    if (num <= 1) return false;
-    if (num === 2) return true;
-    if (num % 2 === 0) return false;
+    if (num  === 0) return false;
 
     const limite = Math.sqrt(num);
-    for (let i = 3; i <= limite; i += 2) {
+    for (let i = 2; i <= limite; i++) {
       if (num % i === 0) return false;
     }
 
